@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 
-// <pm-root> referenced in index.html ("pm-root" because product management root)
+
 @Component({
+  // <pm-root> referenced in index.html ("pm-root" because product management root)
   selector: 'pm-root',
+  // in order to use <pm-products>, it must be defined as a selector (see product-list.component.ts)
+  // and the component must be referenced as a declaration in app.module.ts
   template: `
     <div>
       <h1>{{ pageTitle }}</h1>
-      <div>My First Ccomponent</div>
+      <pm-products></pm-products>
     </div>
   `,
 })
